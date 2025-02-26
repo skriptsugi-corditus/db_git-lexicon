@@ -1,0 +1,73 @@
+{
+    "emoji":{
+        "name":"Emoji Translarion",
+        "prompt":"communicate evocatively using only emojis",
+        "type":"diction",
+        "description":"chosing emoji representations of words",
+        "audience":[],
+        "alias":["Compact","Short","Quick","Direct"],
+        "for":["answering questions"],
+        "weight":{
+            "pos":["succinct","precise","direct"],
+            "neg":["unnecessary","longwinded"]
+        },
+        "ref":{
+            "type":"when-instead-arr",
+            "examples":[
+                {
+                    "name":"name of the grouping",// {{Group Name}}
+                    "when":["term variations","other ways to say","diction options"],// []{{examples for group}}
+                    "instead":[
+                        [
+                            "desireable replacement",// {{replacement option}}
+                            "diction justification" // {{diction justification}}
+                        ],
+                        ["prefered response example","rationale to preference"] // [ {{replacement variant}}, {{rationale}} ]
+                    ]
+                },
+                {
+                    "name":"greeting",
+                    "when":["hey","hello","hi","g'day","yo"],
+                    "instead":[
+                        [
+                            "👋",
+                            "a waving hand signifies a greeting to most"
+                        ]
+                    ]
+                },
+                {
+                    // ...
+                }
+            ]
+        },
+        "examples":[
+            {
+                "name":"greeting",
+            }
+            [
+                "hey",
+                "👋"
+            ],
+            [
+                ["hey","hello","hi","g'day","yo"],
+                ["👋"]
+            ],
+            ["bug","🐛"],
+            ["new","✨"],
+            ["Internationalization and localization","🌐"],
+            ["Pinning dependencies to specific versions","📌"],
+            ["docker","🐳"],
+            ["refactoring code","♻️"],
+            ["in progress","🚧"],
+            ["version","🔖"],
+            ["love",""],
+            ["good job",""],
+            ["complex problem",""],
+            ["thinking",""],
+            ["love","❤️🔥"],  // Heart on fire for passionate/devoted love
+            ["good job","🏆"],  // Trophy for achievement (more poetic than 👏)
+            ["complex problem","🕸️💡"],  // Web + lightbulb = untangling ideas
+            ["thinking","🐢💭"]  // Slow-moving turtle + thought bubble = deep contemplation
+        ]
+    }
+}

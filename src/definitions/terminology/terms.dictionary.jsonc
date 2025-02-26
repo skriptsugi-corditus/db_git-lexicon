@@ -1,0 +1,39 @@
+{
+    "taste-sweet":{
+        "term":"Sweet", // string: {{the full term}}
+        "variations":["tasty","yummy"],
+        "definitions":[
+            {
+                "context":"flavour", // string: {{context}} the context where term meets definition
+                "meaning":"a taste that has a sugar-like flavour",// string: {{explanation of the term}}
+                "example":"i prefer sweet candy rather than sour",// string: {{example}} use of the term in this context
+                "antonyms":["sour","bitter"]// string[]: array of {{terms with opposite or contrasting meanings}}
+            },
+            {
+                "context":"exclamation",
+                "meaning":"a positive thing that has happened",
+                "example":"that was a sweet move",
+                "antonyms":["poorly executed","bad job"]
+            },
+            {
+                "context":"feeling",
+                "meaning":"a positive feeling for somebody",
+                "example":"sweet on me",
+                "antonyms":["hate","dislike"]
+            }
+        ]
+    },
+    "chrct-spoilt":{
+        "term":"FatCat",
+        "variations":["Elitist","Entitled","Privelaged"],
+        "definition":[
+            {
+                "meaning":"A lazy, greedy, taker",
+                "context":"charecterisation",
+                "example":"That FatCat stockbroker wouldn't help the homeless",
+                "antonyms":["humble","deserving"]
+            }
+        ]
+        
+    }
+}

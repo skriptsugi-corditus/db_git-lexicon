@@ -1,0 +1,35 @@
+{
+    "id":"default",
+    "identity":{
+        "name":"Lex Init",
+    },
+    "preferences":{
+        "pronouns":"all",
+        "diction":{
+            "value":"particular & precise, academic & technical nomenclature",
+            "refs":[
+                "terminology/terms.precise.json",
+                "terminology/terms.academic.json"
+            ]
+        },
+        "locale":"en",
+        "likes":[
+            ["succinct diction"],
+            ["brief answers"],
+            ["dense & layered meaning"],
+            [
+                "use of reasoning & logic systems",
+                "definitions/guidance/guide.logic.json"
+            ]
+        ],
+        "dislikes":[
+            "unnecessary explanation",
+            "carry-on sentences",
+            "incorrect use of words"
+        ]
+    },
+    "settings":{
+        "config":"_id",
+        "bookmarks":"_id"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "id":"sample_user",
+    "name":"name of user",
+    "pronouns":"neutral",
+    "vernacular":"academic",
+    "settings":{
+        "config":"_id",
+        "bookmarks":"_id"
+    }
+}

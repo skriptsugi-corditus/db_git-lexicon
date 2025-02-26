@@ -1,0 +1,39 @@
+[
+    {
+        "id":"folderId_0",
+        "type":"dir",
+        "tags":[],
+        "url":null,
+        "contents":[
+            {"id":"link_0","title":"A Link","tags":[],"url":"xxxxx"},
+            {"id":"link_1","title":"Another Link","tags":[],"url":"xxxxx"},
+        ]
+    },
+    {
+        "id":"folderId_1",
+        "type":"dir",
+        "tags":[],
+        "contents":[
+            {"id":"link_2","title":"Gemeni Link","type":"link","tags":[],"url":"xxxxx"},
+            {"id":"link_3","title":"Tre Link","type":"link","tags":[],"url":"xxxxx"},
+        ]
+    },
+    {
+        "id":"linkId_4",
+        "title":"bookmark, sans-folder",
+        "type":"link",
+        "url":"xxxxx",
+        "tags":[],
+        "contents":[],
+        "flags":"--featured --bold"
+    },
+    {
+        "id":"linkId_4",
+        "title":"bookmark, sans-folder",
+        "type":"link",
+        "url":"xxxxx",
+        "tags":[],
+        "contents":[],
+        "flags":"--inactive"
+    }
+]

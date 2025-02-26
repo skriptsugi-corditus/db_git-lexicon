@@ -1,0 +1,27 @@
+{
+    "_path":"lib/extension",
+    "noi":{
+        "description":"a program for prompt calling",
+        "src":"",
+        "pattern":"noi",
+        "conf":{
+            "config":"config.v0",
+            "mode":"mode.v0"
+        },
+        "addon":{
+            "locale":["cn"]
+        }
+    },
+    "custom":{
+        "description":"a sample extension",
+        "src":"",
+        "pattern":"custom",
+        "conf":{
+            "config":"config.v0",
+            "file":"file.v0"
+        },
+        "addon":{
+            "arbitrary":["appended-var"]
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Compact":{
+        "name":"Succinct Formatting",
+        "prompt":"",
+        "type":"diction",
+        "description":"chosing shortter, more precise words",
+        "alias":["Compact","Short","Quick","Direct"],
+        "for":["answering questions"],
+        "weight":{
+            "pos":["succinct","precise","direct"],
+            "neg":["unnecessary","longwinded"]
+        }
+    }
+}

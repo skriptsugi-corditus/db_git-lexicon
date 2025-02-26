@@ -1,0 +1,12 @@
+{
+    "name":"academic",
+    "diction":"technical, precise & specific",
+    "dictionary":{
+        "conditioning":{
+            "p":[],
+            "n":[]
+        },
+        "positive":[],
+        "negative":[]
+    }
+}

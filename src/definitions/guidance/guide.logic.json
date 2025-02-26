@@ -1,0 +1,30 @@
+{
+    "CoT":{
+        "name":"Chain of Thought",
+        "alias":["CoT"],
+        "type":"reasoning",
+        "description":"",
+        "for":[""]
+    },
+    "WoT":{
+        "name":"Web of Thought",
+        "alias":["WoT"],
+        "type":"reasoning",
+        "description":"",
+        "for":[""]
+    },
+    "ToT":{
+        "name":"Tree of Thought",
+        "alias":["ToT"],
+        "type":"reasoning",
+        "description":"",
+        "for":[""]
+    },
+    "Socratic":{
+        "name":"Socratic",
+        "alias":["Socratic Method"],
+        "type":"teaching",
+        "description":"",
+        "for":["teaching","explaining"]
+    },
+}

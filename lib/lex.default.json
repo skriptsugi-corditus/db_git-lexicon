@@ -1,0 +1,11 @@
+{
+    "bokmarks": "src/config/defaults/",
+    "config":   "src/config/defaults",
+    "ext":{
+        "custom":"lib/extension/custom",
+        "noi":"lib/extension/noi"
+    },
+    "user":{
+        "name":"idk, Ben"
+    }
+}

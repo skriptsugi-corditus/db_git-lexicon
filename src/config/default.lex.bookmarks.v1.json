@@ -1,0 +1,45 @@
+{
+    "favourites":[
+        {
+            "id":"folderId_0",
+            "name":"A folder of links",
+            "flags":"",
+            "contents":[
+                {"id":"link_0","flags":"--feature"},
+                {"id":"link_2"},
+                {"id":"link_3","flags":"--inactive"}
+            ]
+        },
+        {
+            "id":"folderId_1",
+            "name":"Second Folder",
+            "flags":"--color-accent",
+            "contents":[
+                {"id":"link_2"},
+                {"id":"link_4"},
+                {"id":"link_6"}
+            ]
+        },
+        {
+            "id":"tag_folder_0",
+            "name":"directory of tags",
+            "flags":{
+                "pop-tags":"OR"
+            },
+            "tags":["chatGPT","freeTier"],
+            "contents":[],
+            "sort":{
+                "type":"abc","direction":"desc"
+            }
+        }
+    ],
+    "links":{
+        "lex-link-0":{"name":"natural name","url":"xxxxxxx","tags":[],"flags":""},
+        "lex-link-1":{"name":"another link","url":"xxxxxxx","tags":[],"flags":""},
+        "lex-link-2":{"name":"some link","url":"xxxxxxx","tags":[],"flags":""},
+        "lex-link-3":{"name":"some link","url":"xxxxxxx","tags":[],"flags":""},
+        "lex-link-4":{"name":"some link","url":"xxxxxxx","tags":[],"flags":""},
+        "user-link-0":{"name":"some link","url":"xxxxxxx","tags":["user"],"flags":"--color-profile"},
+        "user2-link-0":{"name":"some link","url":"xxxxxxx","tags":["user2"],"flags":""}
+    }
+}
