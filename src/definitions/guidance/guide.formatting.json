@@ -1,14 +1,218 @@
 {
-    "md":{
-        "name":"Markdown Formatting",
-        "prompt":"",
-        "type":"diction",
-        "description":"chosing shortter, more precise words",
-        "alias":["Compact","Short","Quick","Direct"],
-        "for":["answering questions"],
-        "weight":{
-            "pos":["succinct","precise","direct"],
-            "neg":["unnecessary","longwinded"]
+    "md": {
+        "name": "Markdown Formatting",
+        "prompt": "Format responses using modern Markdown (.md) syntax, utilizing advanced features like tables, lists, callouts, code blocks, and emojis to enhance readability and structure.",
+        "type": "syntax",
+        "description": "A lightweight markup language for creating formatted text using plain text syntax. Supports features like headers, lists, tables, code blocks, task lists, emojis, and more. Ideal for documentation, READMEs, and structured communication.",
+        "alias": [".md", "markdown", "mrkd"],
+        "for": ["presentation", "readability", "documentation", "cross-platform compatibility"],
+        "weight": {
+            "pos": ["organized", "structured", "portable", "versatile"],
+            "neg": ["messy", "unintuitive", "platform-dependent"]
+        },
+        "ref": {
+            "type": "markdown-syntax-examples",
+            "examples": [
+                {
+                    "name": "header",
+                    "when": ["<h1>Heading</h1>", "<h2>Subheading</h2>"],
+                    "instead": [
+                        ["# Heading", "Markdown H1 header"],
+                        ["## Subheading", "Markdown H2 header"]
+                    ],
+                    "note": "Use 1–6 `#` symbols for H1–H6 headers."
+                },
+                {
+                    "name": "inline code",
+                    "when": ["Use the git status command..."],
+                    "instead": [
+                        ["Use `git status` to list files", "Wrap code/keywords in single backticks."]
+                    ]
+                },
+                {
+                    "name": "task list",
+                    "when": ["Task 1 and 3 are complete; Task 2 is pending"],
+                    "instead": [
+                        [
+                            "- [x] Task 1\n- [ ] Task 2\n- [x] Task 3",
+                            "Task lists use `- [ ]` for incomplete and `- [x]` for complete items."
+                        ]
+                    ]
+                },
+                {
+                    "name": "color reference",
+                    "when": ["The background color is white"],
+                    "instead": [
+                        ["Background: `#ffffff`", "Use backticks to highlight color codes (HEX/RGB/HSL)."]
+                    ]
+                },
+                {
+                    "name": "emojis",
+                    "when": ["@user 👍 Great work! ⚠️ Fix warnings"],
+                    "instead": [
+                        [
+                            "@user :+1: Great work! :warning: Fix warnings",
+                            "Use `:emoji_code:` syntax (e.g., `:warning:`)."
+                        ]
+                    ]
+                },
+                {
+                    "name": "table",
+                    "when": ["Create a table for product specs:\nProduct | Price\nWidget | $10\nGadget | $20"],
+                    "instead": [
+                        [
+                            "| Product  | Price |\n|----------|-------|\n| Widget   | $10   |\n| Gadget   | $20   |",
+                            "Use pipes (`|`) and hyphens (`---`) to define columns and alignment."
+                        ]
+                    ]
+                },
+                {
+                    "name": "code block",
+                    "when": ["Write a Python function:\ndef hello():\n    print('Hello!')"],
+                    "instead": [
+                        [
+                            "```python\ndef hello():\n    print('Hello!')\n```",
+                            "Wrap code in triple backticks with optional language specifiers."
+                        ]
+                    ]
+                },
+                {
+                    "name": "blockquote",
+                    "when": ["Quote from Einstein: 'Imagination is more important than knowledge.'"],
+                    "instead": [
+                        [
+                            "> Imagination is more important than knowledge.\n> – Albert Einstein",
+                            "Use `>` at the start of a line for blockquotes."
+                        ]
+                    ]
+                },
+                {
+                    "name": "image/link",
+                    "when": ["Insert logo.png as an image", "Link to https://example.com"],
+                    "instead": [
+                        ["![Logo](logo.png)", "Image syntax: `![alt text](url)`"],
+                        ["[Visit Example](https://example.com)", "Link syntax: `[text](url)`"]
+                    ]
+                },
+                {
+                    "name": "horizontal rule",
+                    "when": ["Add a divider between sections"],
+                    "instead": [
+                        ["---", "Use `---`, `***`, or `___` to create a horizontal rule."]
+                    ]
+                },
+                {
+                    "name": "strikethrough",
+                    "when": ["Update price from ~~$50~~ to $45"],
+                    "instead": [
+                        ["~~$50~~ → $45", "Wrap text in `~~` for strikethrough."]
+                    ]
+                }
+            ]
         }
     },
+    "yaml": {
+        "name": "YAML Formatting",
+        "prompt": "Format responses using YAML syntax with strict indentation, comments, and human-readable structures. Use features like anchors, lists, and multi-line strings.",
+        "type": "syntax",
+        "description": "A human-friendly data serialization standard for configuration files and structured data. Relies on indentation, colons, and dashes. Supports comments and reusable anchors.",
+        "alias": [".yaml", ".yml"],
+        "for": ["configuration", "data serialization", "docker-compose", "CI/CD pipelines"],
+        "weight": {
+            "pos": ["human-readable", "hierarchical", "comment-support"],
+            "neg": ["indentation-sensitive", "colon-misuse"]
+        },
+        "ref": {
+            "type": "yaml-syntax-examples",
+            "examples": [
+                {
+                    "name": "basic structure",
+                    "when": ["key: value\nsecond_key: 123"],
+                    "instead": [
+                        [
+                            "key: value\nsecond_key: 123",
+                            "YAML uses colons with space for key-value pairs. No curly braces or commas required."
+                        ]
+                    ]
+                },
+                {
+                    "name": "nested list",
+                    "when": ["features: [logging, auth, api]"],
+                    "instead": [
+                        [
+                            "features:\n  - logging\n  - auth\n  - api",
+                            "Use hyphens and indentation for lists instead of square brackets."
+                        ]
+                    ]
+                },
+                {
+                    "name": "multi-line string",
+                    "when": ["description: 'Line 1\\nLine 2\\nLine 3'"],
+                    "instead": [
+                        [
+                            "description: |\n  Line 1\n  Line 2\n  Line 3",
+                            "Use `|` for literal multi-line strings with preserved newlines."
+                        ]
+                    ]
+                },
+                {
+                    "name": "anchor/reference",
+                    "when": ["server: &defaults\n  env: prod\nweb_server:\n  env: prod"],
+                    "instead": [
+                        [
+                            "defaults: &defaults\n  env: prod\nserver:\n  <<: *defaults\nweb_server:\n  <<: *defaults",
+                            "Use `&` to create anchors and `*` to reference them for reusability."
+                        ]
+                    ]
+                }
+            ]
+        }
+    },
+    "jsonc": {
+        "name": "JSONC Formatting (JSON with Comments)",
+        "prompt": "Format responses using JSON syntax with // or /* */ comments for explanations. Maintain strict JSON structure while allowing documentation.",
+        "type": "syntax",
+        "description": "JSON superset that supports comments. Used in configuration files where documentation is required. Not valid standard JSON.",
+        "alias": [".jsonc"],
+        "for": ["vscode settings", "tsconfig.json", "commented configs"],
+        "weight": {
+            "pos": ["commentable", "structured", "tooling-support"],
+            "neg": ["non-standard", "parser-restrictions"]
+        },
+        "ref": {
+            "type": "jsonc-syntax-examples",
+            "examples": [
+                {
+                    "name": "inline comment",
+                    "when": ["{\"port\": 3000  /* web server port */}"],
+                    "instead": [
+                        [
+                            "{\n  \"port\": 3000, // Web server port\n}",
+                            "Use `//` for line comments or `/* */` for block comments."
+                        ]
+                    ]
+                },
+                {
+                    "name": "trailing comma",
+                    "when": ["{\n  \"key1\": true,\n  \"key2\": false,\n}"],
+                    "instead": [
+                        [
+                            "{\n  \"key1\": true,\n  \"key2\": false\n}",
+                            "JSONC allows trailing commas ONLY within comments. Avoid them in data."
+                        ]
+                    ]
+                },
+                {
+                    "name": "commented config",
+                    "when": ["{\"compilerOptions\": {\"target\": \"es5\"}}"],
+                    "instead": [
+                        [
+                            "{\n  \"compilerOptions\": {\n    /* Transpile to ES5 for legacy browsers */\n    \"target\": \"es5\"\n  }\n}",
+                            "Add context via comments while maintaining valid JSON structure."
+                        ]
+                    ]
+                }
+            ]
+        }
+    }
 }

@@ -4,70 +4,134 @@
         "prompt":"communicate evocatively using only emojis",
         "type":"diction",
         "description":"chosing emoji representations of words",
-        "audience":[],
-        "alias":["Compact","Short","Quick","Direct"],
-        "for":["answering questions"],
+        "audience":["computer geek"],
+        "alias":["symbolism","iconography"],
+        "for":["communication"],
         "weight":{
-            "pos":["succinct","precise","direct"],
-            "neg":["unnecessary","longwinded"]
+            "pos":["evocative","interpretative","symbolic"],
+            "neg":["literal","specific"]
         },
-        "ref":{
-            "type":"when-instead-arr",
-            "examples":[
+        "ref": {
+            "type": "when-instead-arr",
+            "examples": [
                 {
-                    "name":"name of the grouping",// {{Group Name}}
-                    "when":["term variations","other ways to say","diction options"],// []{{examples for group}}
-                    "instead":[
-                        [
-                            "desireable replacement",// {{replacement option}}
-                            "diction justification" // {{diction justification}}
-                        ],
-                        ["prefered response example","rationale to preference"] // [ {{replacement variant}}, {{rationale}} ]
+                    "name": "greeting",
+                    "when": ["hey", "hello", "hi", "g'day", "yo", "howdy"],
+                    "instead": [
+                        ["👋", "Universal recognition across platforms"],
+                        ["🖐️", "Casual modern variation of waving"],
+                        ["🙏", "Respectful greeting in many Asian cultures"]
                     ]
                 },
                 {
-                    "name":"greeting",
-                    "when":["hey","hello","hi","g'day","yo"],
-                    "instead":[
-                        [
-                            "👋",
-                            "a waving hand signifies a greeting to most"
-                        ]
+                    "name": "software anomalies",
+                    "when": ["bug", "glitch", "crash", "defect"],
+                    "instead": [
+                        ["🐛", "Universal dev community symbol"],
+                        ["⚠️", "Clear warning indication"],
+                        ["🤖💥", "Robot explosion for catastrophic failure"]
                     ]
                 },
                 {
-                    // ...
+                    "name": "novelty",
+                    "when": ["new", "fresh", "update", "feature"],
+                    "instead": [
+                        ["✨", "Immediate visual cue for novelty"],
+                        ["🆕", "Standard 'new' label symbol"],
+                        ["🌱", "Growth metaphor for early-stage features"]
+                    ]
+                },
+                {
+                    "name": "globalization",
+                    "when": ["Internationalization", "localization", "i18n", "l10n"],
+                    "instead": [
+                        ["🌐", "Direct globe representation"],
+                        ["🗺️", "Detailed geographical context"],
+                        ["👂🌍", "Ear + globe = language adaptation"]
+                    ]
+                },
+                {
+                    "name": "dependency management",
+                    "when": ["pinning versions", "lockfile", "freeze dependencies"],
+                    "instead": [
+                        ["📌", "Physical pinning metaphor"],
+                        ["🔒", "Security/stability connotation"],
+                        ["⏸️", "Pause symbol for version freezing"]
+                    ]
+                },
+                {
+                    "name": "containerization",
+                    "when": ["docker", "container", "podman", "k8s"],
+                    "instead": [
+                        ["🐳", "Docker's official mascot"],
+                        ["📦", "Generic packaging symbol"],
+                        ["🚢", "Cargo transport metaphor"]
+                    ]
+                },
+                {
+                    "name": "code maintenance",
+                    "when": ["refactoring", "rewrite", "cleanup", "optimize"],
+                    "instead": [
+                        ["♻️", "Standard recycling symbol"],
+                        ["🧼", "Cleaning metaphor"],
+                        ["🦾", "Mechanical improvement concept"]
+                    ]
+                },
+                {
+                    "name": "development status",
+                    "when": ["in progress", "WIP", "unstable", "prototype"],
+                    "instead": [
+                        ["🚧", "Universal construction warning"],
+                        ["🔩", "Mechanical assembly process"],
+                        ["🧪", "Experimental development phase"]
+                    ]
+                },
+                {
+                    "name": "version control",
+                    "when": ["version", "release", "tag", "v1.0"],
+                    "instead": [
+                        ["🔖", "Bookmark-style tagging"],
+                        ["🏷️", "Labeling system metaphor"],
+                        ["⏱️", "Time-based version tracking"]
+                    ]
+                },
+                {
+                    "name": "affection",
+                    "when": ["love", "passion", "devotion", "crush"],
+                    "instead": [
+                        ["❤️🔥", "Intense burning passion"],
+                        ["💘", "Standard love symbol"],
+                        ["🤝❤️", "Connection + heart = mutual affection"]
+                    ]
+                },
+                {
+                    "name": "recognition",
+                    "when": ["good job", "well done", "kudos", "nailed it"],
+                    "instead": [
+                        ["🏆", "Ultimate achievement symbol"],
+                        ["👑", "Crowning success metaphor"],
+                        ["🎖️", "Military-grade recognition"]
+                    ]
+                },
+                {
+                    "name": "problem solving",
+                    "when": ["complex problem", "challenge", "brain teaser", "puzzle"],
+                    "instead": [
+                        ["🕸️💡", "Web of complexity + solution"],
+                        ["🧩", "Piece assembly metaphor"],
+                        ["⚡🧠", "Mental breakthrough symbol"]
+                    ]
+                },
+                {
+                    "name": "cognition",
+                    "when": ["thinking", "contemplating", "pondering", "analyzing"],
+                    "instead": [
+                        ["🐢💭", "Slow deliberate processing"],
+                        ["🤔", "Universal thinking emoji"],
+                        ["🧠⚗️", "Mental chemistry metaphor"]
+                    ]
                 }
             ]
-        },
-        "examples":[
-            {
-                "name":"greeting",
-            }
-            [
-                "hey",
-                "👋"
-            ],
-            [
-                ["hey","hello","hi","g'day","yo"],
-                ["👋"]
-            ],
-            ["bug","🐛"],
-            ["new","✨"],
-            ["Internationalization and localization","🌐"],
-            ["Pinning dependencies to specific versions","📌"],
-            ["docker","🐳"],
-            ["refactoring code","♻️"],
-            ["in progress","🚧"],
-            ["version","🔖"],
-            ["love",""],
-            ["good job",""],
-            ["complex problem",""],
-            ["thinking",""],
-            ["love","❤️🔥"],  // Heart on fire for passionate/devoted love
-            ["good job","🏆"],  // Trophy for achievement (more poetic than 👏)
-            ["complex problem","🕸️💡"],  // Web + lightbulb = untangling ideas
-            ["thinking","🐢💭"]  // Slow-moving turtle + thought bubble = deep contemplation
-        ]
+        }
     }
 }
